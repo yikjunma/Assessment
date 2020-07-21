@@ -3,6 +3,39 @@ Set up instructions.
 Obtain Melodic and Husky Ros Distrabutions (Assumption that OS used is ubuntu 18.4)
 1. Follow guide from http://wiki.ros.org/melodic/Installation/Ubuntu for melodic
 2. For guide from http://wiki.ros.org/husky_gazebo/Tutorials/Simulating%20Husky for simulation 
-	NOTE - In the command "$ sudo apt-get install ros-<distro>-husky-simulator" change <distro> to melodic to get the correct 		version.
+	NOTE - In the command "$ sudo apt-get install ros-<distro>-husky-simulator" change <distro> to melodic to get the correct version.
+Building the source code for the nodes.
+1. Assuming the above is done and ssource code anti_clockwise.py and clockwise.cpp have been obtained, 
+	 C++:
+	 i. First create a local workspace by creating a root folder and a src folder in the root directory. Once created run catkin_init_workspace to initialise the environment, then run catkin_create_pkg packagename roscpp std_msgs. In the create work environment directory ../../packagename/src add the clockwise.cpp code.
+	 ii. in the packagename directory edit the CMakeLists.txt file and add add_executable(packagename src/clockwise.cpp)
+target_link_libraries(packagename ${catkin_LIBRARIES})
+	iii. back in the root directory create launch a terminal and run source ~/RootDirName/devel/setup.bash. Note must be ran on all new terminals
+	iv. Run catkin_make in the root directory.
+	v. use rosrun packagename clockwise to run the node.
+	
+	python 
+	 i. First create a local workspace by creating a root folder and a src folder in the root directory. Once created run catkin_init_workspace to initialise the environment, then run catkin_create_pkg packagename roscpp std_msgs. In the create work environment directory ../../packagename/src add the anti_clockwise.py code.   ii. In a terminal at the location where the anti_clockwise.py file was added run chmon +x anti_clockwise.py to make the file executable.
+	iii. back in the root directory create launch a terminal and run source ~/RootDirName/devel/setup.bash. Note must be ran on all new terminals
+	iv. Run catkin_make in the root directory.
+	v. use rosrun packagename anti_clockwise.py to run the node.
+2. Once files are compiled run roscore on an alternate terminal, this will enable the nodes to be run using rosrun packagename exename.
+3. The following rostopic echo /cmd_vel can be used to see the changes in motion of the simulation in a new terminal.
+4. A graphical representation is available using roslaunch husky_gazebo husky_empty_world.launch.
+
+Get repo from https://github.com/yikjunma/Assessment.git
+
+Compiling Daemon code from source.
+1, In root folder of project place the Runthis.c file.
+2. Open a terminal and compile to c program using cgcc -o Name RunThis.c
+3. to run the daemon use ./Name
+
+Run simulation using daemons.
+1. Once repository is obtained in the root of the project open a terminal.
+2. in root run source ~/"<RootDirName>"/devel/setup.bash, replacing "<RootDirName>" with the root directory name you have installed to. default cmd is ~/Assessment/devel/setup.bash.
+3. Run the compiled C program "RunRos" to run roscore and the two nodes.
+
+
+
 
 
