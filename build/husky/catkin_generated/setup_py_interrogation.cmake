@@ -1,0 +1,7 @@
+set(husky_SETUP_PY_SETUP_MODULE "distutils.core")
+set(husky_SETUP_PY_VERSION "0.0.0")
+set(husky_SETUP_PY_SCRIPTS "")
+set(husky_SETUP_PY_PACKAGES "husky")
+set(husky_SETUP_PY_PACKAGE_DIRS "src/husky")
+set(husky_SETUP_PY_MODULES "")
+set(husky_SETUP_PY_MODULE_DIRS "")

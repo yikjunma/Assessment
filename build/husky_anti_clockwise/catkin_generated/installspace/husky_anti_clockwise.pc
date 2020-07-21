@@ -1,0 +1,8 @@
+prefix=/home/test/husky/install
+
+Name: husky_anti_clockwise
+Description: Description of husky_anti_clockwise
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

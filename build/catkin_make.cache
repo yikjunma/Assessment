@@ -1,0 +1,2 @@
+husky_anti_clockwise:husky_clockwise
+-DCATKIN_DEVEL_PREFIX=/home/test/husky/devel -DCMAKE_INSTALL_PREFIX=/home/test/husky/install -G Unix Makefiles

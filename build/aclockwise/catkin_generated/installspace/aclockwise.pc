@@ -1,0 +1,8 @@
+prefix=/home/test/husky/install
+
+Name: aclockwise
+Description: Description of aclockwise
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/test/husky/devel
+
+Name: husky_clockwise
+Description: Description of husky_clockwise
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

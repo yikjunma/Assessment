@@ -1,0 +1,8 @@
+Set up instructions.
+
+Obtain Melodic and Husky Ros Distrabutions (Assumption that OS used is ubuntu 18.4)
+1. Follow guide from http://wiki.ros.org/melodic/Installation/Ubuntu for melodic
+2. For guide from http://wiki.ros.org/husky_gazebo/Tutorials/Simulating%20Husky for simulation 
+	NOTE - In the command "$ sudo apt-get install ros-<distro>-husky-simulator" change <distro> to melodic to get the correct 		version.
+
+
